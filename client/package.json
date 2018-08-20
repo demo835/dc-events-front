@@ -1,0 +1,19 @@
+{
+  "name": "dc-events-front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  },
+  "author": "mike, thomas, neil",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-materialize": "^2.4.3",
+    "react-router-dom": "^4.3.1"
+  }
+}
