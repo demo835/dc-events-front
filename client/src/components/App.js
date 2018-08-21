@@ -12,6 +12,7 @@ class App extends Component {
     render() {
         return (
             <div>
+                <h1>DC Events Front End</h1>
             </div>
         )
     }
