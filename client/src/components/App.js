@@ -18,22 +18,9 @@ class App extends Component {
   componentDidMount() {
       axios.get("http://localhost:3001/events")
       .then(data => {
-        console.log("data is from axios...")
-        console.log(data)
+        console.log("get event data is from axios...")
+        console.log(data.data[0])
     })
-    // fetch("http://localhost:3001/events")
-    // .then(res => res.json())
-    // .then(data => {
-    //     console.log("data is")
-    //     console.log(data)
-    //     // let items = []
-    //     // for(let i = 0; i < data.length; i++)
-    //     // {
-    //     //     items[i] = data[i]
-    //     // }
-    //     // this.setState({response: data[0].condition})
-    //     // this.setState({id: data[0]._id})
-    // })
   }
 
   render() {
