@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import Events from './Events'
+import React, { Component } from "react";
+import Events from "./Events";
+import axios from "axios";
 
 class App extends Component {
   constructor() {
@@ -7,7 +8,11 @@ class App extends Component {
 
     this.state = {};
   }
-
+  componentDidMount() {
+    axios.get("localhost:3001/events").then(data => {
+      console.log(data);
+    });
+  }
   render() {
     return (
       <div>

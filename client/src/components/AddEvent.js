@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 class AddEvent extends Component {
   constructor() {
     super();

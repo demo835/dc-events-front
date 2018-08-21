@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Event from "./Event";
-import axios from "axios";
 
 class Events extends Component {
   constructor(props) {
@@ -8,12 +7,6 @@ class Events extends Component {
     this.state = {
       events: []
     };
-  }
-  componentDidMount() {
-    axios.get("localhost:3001/events").then(res => {
-      this.setState({ events: res.data });
-      console.log(this.state.events);
-    });
   }
   render() {
     return (
