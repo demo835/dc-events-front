@@ -3,6 +3,7 @@ import {
     Route,
     Switch
   } from 'react-router-dom'
+import axios from 'axios'
 import Events from './Events'
 
 class App extends Component {
@@ -10,24 +11,29 @@ class App extends Component {
     super()
 
     this.state = {
-        
+
     }
   }
 
   componentDidMount() {
-    fetch("http://localhost:3001/show")
-    .then(res => res.json())
-    .then(data => {
-        console.log("data is")
+      axios.get("http://localhost:3001/events")
+      .then(data => {
+        console.log("data is from axios...")
         console.log(data)
-        // let items = []
-        // for(let i = 0; i < data.length; i++)
-        // {
-        //     items[i] = data[i]
-        // }
-        this.setState({response: data[0].condition})
-        this.setState({id: data[0]._id})
     })
+    // fetch("http://localhost:3001/events")
+    // .then(res => res.json())
+    // .then(data => {
+    //     console.log("data is")
+    //     console.log(data)
+    //     // let items = []
+    //     // for(let i = 0; i < data.length; i++)
+    //     // {
+    //     //     items[i] = data[i]
+    //     // }
+    //     // this.setState({response: data[0].condition})
+    //     // this.setState({id: data[0]._id})
+    // })
   }
 
   render() {
