@@ -32,8 +32,15 @@ class App extends Component {
         <p>+Events</p>
         <p>+Venues</p>
         <div className='body'>
-        <Switch>
+            <Switch>
               <Route path='/'
+                render={(props) => {
+                  return (
+                    <Events events={this.state.events}/>
+                  )
+                }}
+              />
+              <Route path='/events'
                 render={(props) => {
                   return (
                     <Events events={this.state.events}/>

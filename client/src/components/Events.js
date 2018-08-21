@@ -16,9 +16,10 @@ class Events extends Component {
   //   });
   // }
   render() {
+    let passed = this.props.events
     return (
       <div>
-        <Event />
+        <Event event={passed}/>
       </div>
     );
   }
