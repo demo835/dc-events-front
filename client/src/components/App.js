@@ -15,6 +15,7 @@ class App extends Component {
                 <h1>DC Events Front End</h1>
                 <p>+Events</p>
                 <p>+Venues</p>
+                <Events />
             </div>
         )
     }
