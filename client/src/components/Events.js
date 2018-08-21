@@ -12,3 +12,5 @@ class Events extends Component {
   }
 
   export default Events
+
+  //"proxy": "http://localhost:3001",
