@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
+import {
+    Route,
+    Switch
+  } from 'react-router-dom'
 import Events from './Events'
 
 class App extends Component {
   constructor() {
-    super();
+    super()
 
-    this.state = {};
+    this.state = {}
   }
 
   render() {
@@ -14,10 +18,20 @@ class App extends Component {
         <h1>DC Events Front End</h1>
         <p>+Events</p>
         <p>+Venues</p>
-        <Events />
+        <div className='body'>
+        <Switch>
+              <Route path='/'
+                render={(props) => {
+                  return (
+                    <Events />
+                  )
+                }}
+              />
+            </Switch>
+      </div>
       </div>
     );
   }
 }
 
-export default App;
+export default App
