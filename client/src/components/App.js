@@ -13,6 +13,8 @@ class App extends Component {
         return (
             <div>
                 <h1>DC Events Front End</h1>
+                <p>+Events</p>
+                <p>+Venues</p>
             </div>
         )
     }
