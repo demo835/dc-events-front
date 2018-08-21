@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Events from './Events'
 
 class App extends Component {
     constructor() {
