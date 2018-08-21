@@ -11,7 +11,7 @@ class App extends Component {
     super()
 
     this.state = {
-
+        events: {}
     }
   }
 
@@ -20,6 +20,8 @@ class App extends Component {
       .then(data => {
         console.log("get event data is from axios...")
         console.log(data.data[0])
+        this.setState({events: data.data[0]})
+        console.log(this.state.events)
     })
   }
 
@@ -34,7 +36,7 @@ class App extends Component {
               <Route path='/'
                 render={(props) => {
                   return (
-                    <Events />
+                    <Events events={this.state.events}/>
                   )
                 }}
               />
