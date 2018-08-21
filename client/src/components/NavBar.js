@@ -1,17 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 class NavBar extends Component {
-    constructor() {
-        super()
+  constructor() {
+    super();
+  }
 
-    }
-
-    render() {
-        return (
-            <div>
-            </div>
-        )
-    }
+  render() {
+    return <div />;
+  }
 }
 
-export default App
+export default NavBar;
