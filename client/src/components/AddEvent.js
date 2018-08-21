@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class App extends Component {
+class AddEvent extends Component {
   constructor() {
     super();
 
@@ -10,10 +10,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>DC Events Front End</h1>
+        <h1>Page to Add Events</h1>
       </div>
     );
   }
 }
 
-export default App;
+export default AddEvent;
