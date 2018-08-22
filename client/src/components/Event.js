@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import axios from 'axios'
-
+import React, { Component } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 class Event extends Component {
 
     onSubmit = e => {
@@ -16,14 +16,10 @@ class Event extends Component {
       };
 
     render () {
-        
-        // console.log("events is from Event.js Component page")
-        // console.log(this.props.events)
 
         const result = this.props.events.filter(eventId => eventId._id === this.props.match.params.id);
 
-        // console.log("result is")
-        // console.log(result)
+        let pathname = `/events/edit/${this.props.match.params.id}`;
 
       return (
         <div>
@@ -47,14 +43,16 @@ class Event extends Component {
                             {/* <Link to={pathname}>View Event</Link> */}
                             {/* <Link to={`/event/delete/${result[0]._id}`}>Delete</Link> */}
                             <button type="submit" onClick={this.onSubmit}>Delete</button>
-                            <p>Update</p>
+                            <Link to={pathname}>Update</Link>
                         </div>
                     </div>
                     </div>
                 </div>
         </div>
-      )
-    }
+    );
   }
+}
 
-  export default Event
+export default Event;
+
+
