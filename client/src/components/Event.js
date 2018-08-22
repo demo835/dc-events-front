@@ -8,7 +8,7 @@ class Event extends Component {
                 <div className="col s12 m7">
                 <div className="card">
                     <div className="card-image">
-                    <img src="../public/images/hamilton-1.jpg" alt="Hamilton"></img>
+                    <img src="../images/hamilton-1.jpg" alt="Hamilton"></img>
                     <span className="card-title">Card Title</span>
                     </div>
                     <div className="card-content">

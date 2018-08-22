@@ -1,6 +1,6 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 import Events from "./Events";
-import axios from "axios";
 
 class App extends Component {
   constructor() {
@@ -8,18 +8,22 @@ class App extends Component {
 
     this.state = {};
   }
-  componentDidMount() {
-    axios.get("localhost:3001/events").then(data => {
-      console.log(data);
-    });
-  }
   render() {
     return (
       <div>
         <h1>DC Events Front End</h1>
         <p>+Events</p>
         <p>+Venues</p>
-        <Events />
+        <div className="body">
+          <Switch>
+            <Route
+              path="/"
+              render={props => {
+                return <Events />;
+              }}
+            />
+          </Switch>
+        </div>
       </div>
     );
   }
