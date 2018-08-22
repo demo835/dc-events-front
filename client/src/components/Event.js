@@ -6,9 +6,9 @@ class Event extends Component {
     onSubmit = e => {
         console.log("submit clicked");
         let data = JSON.stringify({
-          name: this.state.name
+          _id: this.props.match.params.id
         });
-        axios.post("http://localhost:3001/events/new", data, {
+        axios.delete("http://localhost:3001/events/delete/:id", data, {
           headers: {
             "Content-Type": "application/json"
           }
@@ -46,7 +46,7 @@ class Event extends Component {
                         <div className="card-action">
                             {/* <Link to={pathname}>View Event</Link> */}
                             {/* <Link to={`/event/delete/${result[0]._id}`}>Delete</Link> */}
-                            <a href={`/event/delete/${result[0]._id}`}>Delete</a>
+                            <button type="submit" onClick={this.onSubmit}>Delete</button>
                             <p>Update</p>
                         </div>
                     </div>
