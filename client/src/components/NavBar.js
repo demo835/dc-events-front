@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 class NavBar extends Component {
   constructor() {
     super();
@@ -9,15 +9,25 @@ class NavBar extends Component {
     return (
       <nav>
         <div className="nav-wrapper">
-          <a href="#" class="brand-logo">DC Events</a>
+          <a href="#" className="brand-logo">
+            DC Events
+          </a>
           <ul id="nav-mobile" className="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
+            <li>
+              <Link to="add-event">
+                <a>+Event</a>
+              </Link>
+            </li>
+            <li>
+              <a href="badges.html">Components</a>
+            </li>
+            <li>
+              <a href="collapsible.html">JavaScript</a>
+            </li>
           </ul>
         </div>
       </nav>
-    )
+    );
   }
 }
 

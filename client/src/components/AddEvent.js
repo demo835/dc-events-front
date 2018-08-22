@@ -1,43 +1,42 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 class AddEvent extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      img: "",
-      description: "",
-      food: "",
-      date: "",
-      cost: "",
-      venue: ""
+      name: "test from front end",
+      img: "test",
+      description: "test",
+      food: "test",
+      date: "test",
+      cost: "1",
+      venue: "test"
     };
   }
 
   onChange = e => {
     const state = this.state;
-    state[e.target.name] = e.tagret.value;
+    state[e.target.name] = e.target.value;
     this.setState(state);
   };
 
   onSubmit = e => {
-    e.prevent.default();
-    const { name, img, description, food, date, cost, venue } = this.state;
-    axios
-      .post("/events/new", {
-        name,
-        img,
-        description,
-        food,
-        date,
-        cost,
-        venue
-      })
-      .then(result => {
-        this.props.history.push("/events/new");
-      });
+    console.log("submit clicked");
+    let data = JSON.stringify({
+      name: this.state.name,
+      img: this.state.img,
+      description: this.state.description,
+      food: this.state.food,
+      date: this.state.date,
+      cost: this.state.cost,
+      venue: this.state.venue
+    });
+    axios.post("http://localhost:3001/events/new", data, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
   };
 
   render() {
@@ -45,9 +44,6 @@ class AddEvent extends Component {
     return (
       <div>
         <h1>Add Event</h1>
-        <h3>
-          <Link to="/">Back to Events</Link>
-        </h3>
         <form onSubmit={this.onSubmit}>
           <div>
             <label for="name">Name</label>
