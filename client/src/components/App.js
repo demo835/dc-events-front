@@ -6,7 +6,7 @@ import Event from "./Event"
 import NavBar from "./NavBar";
 import AddEvent from "./AddEvent";
 import AddVenue from "./AddVenue";
-import Venue from "./Venue";
+// import Venue from "./Venue";
 
 class App extends Component {
   constructor() {

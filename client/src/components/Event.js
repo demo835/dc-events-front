@@ -1,17 +1,29 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 class Event extends Component {
 
+    onSubmit = e => {
+        console.log("submit clicked");
+        let data = JSON.stringify({
+          name: this.state.name
+        });
+        axios.post("http://localhost:3001/events/new", data, {
+          headers: {
+            "Content-Type": "application/json"
+          }
+        });
+      };
+
     render () {
         
-        console.log("events is from Event.js Component page")
-        console.log(this.props.events)
+        // console.log("events is from Event.js Component page")
+        // console.log(this.props.events)
 
         const result = this.props.events.filter(eventId => eventId._id === this.props.match.params.id);
 
-        console.log("result is")
-        console.log(result)
+        // console.log("result is")
+        // console.log(result)
 
       return (
         <div>
@@ -33,7 +45,8 @@ class Event extends Component {
                             </div>
                         <div className="card-action">
                             {/* <Link to={pathname}>View Event</Link> */}
-                            <p>Delete</p>
+                            {/* <Link to={`/event/delete/${result[0]._id}`}>Delete</Link> */}
+                            <a href={`/event/delete/${result[0]._id}`}>Delete</a>
                             <p>Update</p>
                         </div>
                     </div>
