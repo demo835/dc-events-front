@@ -5,13 +5,13 @@ class AddEvent extends Component {
   constructor() {
     super();
     this.state = {
-      name: "test from front end",
-      img: "test",
-      description: "test",
-      food: "test",
-      date: "test",
-      cost: "1",
-      venue: "test"
+      name: "",
+      img: "",
+      description: "",
+      food: "",
+      date: "",
+      cost: "",
+      venue: ""
     };
   }
 
