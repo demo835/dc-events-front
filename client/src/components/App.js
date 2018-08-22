@@ -4,6 +4,8 @@ import axios from 'axios'
 import Events from "./Events";
 import NavBar from "./NavBar";
 import AddEvent from "./AddEvent"
+import AddVenue from "./AddVenue"
+import Venue from "./Venue"
 
 class App extends Component {
   constructor() {
@@ -34,7 +36,7 @@ class App extends Component {
         <NavBar />
         <div className='body'>
             <Switch>
-              <Route path='/'
+              <Route exact path='/'
                 render={(props) => {
                   return (
                     <Events events={this.state.events}/>
@@ -42,21 +44,22 @@ class App extends Component {
                   )
                 }}
               />
-              <Route path='/events'
+              <Route exact path='/events'
                 render={(props) => {
                   return (
                     <Events events={this.state.events}/>
                   )
                 }}
               />
-              {/* <Route path='/add-event' component={AddEvent}/> */}
-              <Route path='/add-event'
+              <Route path='/add-event' component={AddEvent}/>
+              {/* <Route exact path='/add-event'
                 render={() => {
                   return (
                     <AddEvent />
                   )
                 }}
-                />
+                /> */}
+                <Route exact path='/venue/new' component={AddVenue}/>
             </Switch>
       </div>
       </div>
