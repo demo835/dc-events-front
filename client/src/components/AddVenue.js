@@ -10,7 +10,7 @@ class AddEvent extends Component {
   render() {
     return (
       <div>
-        <h1>Add Venue</h1>
+        {/* <h1>Add Venue</h1>
         <h3>
           <Link to="/">Back to Events</Link>
         </h3>
@@ -86,7 +86,7 @@ class AddEvent extends Component {
             />
           </div>
           <button type="submit">Submit</button>
-        </form>
+        </form> */}
       </div>
     );
   }
