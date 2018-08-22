@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import axios from 'axios'
 import Events from "./Events";
 import NavBar from "./NavBar";
+import AddEvent from "./AddEvent"
 
 class App extends Component {
   constructor() {
@@ -48,6 +49,14 @@ class App extends Component {
                   )
                 }}
               />
+              {/* <Route path='/add-event' component={AddEvent}/> */}
+              <Route path='/add-event'
+                render={() => {
+                  return (
+                    <AddEvent />
+                  )
+                }}
+                />
             </Switch>
       </div>
       </div>
