@@ -1,33 +1,22 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-
 class Event extends Component {
+  onSubmit = e => {
+    console.log("submit clicked");
+    let data = JSON.stringify({
+      _id: this.props.match.params.id
+    });
+    axios.delete("http://localhost:3001/events/delete/:id", data, {
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+  };
   render() {
-    console.log("events is from Event.js Component page");
-    console.log(this.props.events);
-
-    onSubmit = e => {
-      console.log("submit clicked");
-      let data = JSON.stringify({
-        _id: this.props.match.params.id
-      });
-      axios.delete("http://localhost:3001/events/delete/:id", data, {
-        headers: {
-          "Content-Type": "application/json"
-        }
-      });
-    };
-
-    // console.log("events is from Event.js Component page")
-    // console.log(this.props.events)
-
     const result = this.props.events.filter(
       eventId => eventId._id === this.props.match.params.id
     );
-
-    // console.log("result is")
-    // console.log(result)
     let pathname = `/events/edit/${this.props.match.params.id}`;
     return (
       <div>
