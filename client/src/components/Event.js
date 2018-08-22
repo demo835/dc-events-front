@@ -12,7 +12,7 @@ class Event extends Component {
 
     console.log("result is");
     console.log(result);
-
+    let pathname = `/events/edit/${this.props.match.params.id}`;
     return (
       <div>
         {/* <h1>We are on the Event page</h1> */}
@@ -34,7 +34,7 @@ class Event extends Component {
               <div className="card-action">
                 {/* <Link to={pathname}>View Event</Link> */}
                 <p>Delete</p>
-                <p>Update</p>
+                <Link to={pathname}>Update</Link>
               </div>
             </div>
           </div>
