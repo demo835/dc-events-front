@@ -6,12 +6,32 @@ import {
 class Event extends Component {
     render () {
         let passed = this.props.event
+        console.log("passed is")
+        console.log(passed)
+
         let test = this.props.event.map((event, i) => {
             let pathname = `/events/${event._id}`
             return (
-              <li className="stocks-stock" key={i}>
-                 {event.name} <Link to={pathname}>{event.food}</Link>
-               </li>
+                    <div className="row" key={i}>
+                    <div className="col s12 m7">
+                    <div className="card">
+                        <div className="card-image">
+                        <img src={event.img} alt={event.name}></img>
+                        <span className="card-title">{event.name}</span>
+                        </div>
+                            <div className="card-content">
+                                <p>{event.description}.</p>
+                                <p>Food: {event.food}</p>
+                                <p>Cost: {event.cost}</p>
+                                <p>Date: {event.date}</p>
+                                <p>Venue: {event.venue}</p>
+                            </div>
+                        <div className="card-action">
+                            <Link to={pathname}>View Event</Link>
+                        </div>
+                    </div>
+                    </div>
+                </div>
             )
           })
         
@@ -20,7 +40,8 @@ class Event extends Component {
 
       return (
         <div>
-            <div className="row">
+            {test}
+            {/* <div className="row">
                 <div className="col s12 m7">
                 <div className="card">
                     <div className="card-image">
@@ -33,13 +54,14 @@ class Event extends Component {
                             <p>Cost: {passed.cost}</p>
                             <p>Date: {passed.date}</p>
                             <p>Venue: {passed.venue}</p>
+                            {test}
                         </div>
                     <div className="card-action">
                         <a href="#">This is a link</a>
                     </div>
                 </div>
                 </div>
-            </div>
+            </div> */}
         </div>
       )
     }

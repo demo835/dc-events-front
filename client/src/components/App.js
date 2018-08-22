@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
+import axios from 'axios'
 import Events from "./Events";
 
 class App extends Component {
@@ -14,12 +15,14 @@ class App extends Component {
   componentDidMount() {
       axios.get("http://localhost:3001/events")
       .then(data => {
-        console.log("get event data is from axios...")
-        console.log(data.data[0])
-        this.setState({events: data.data[0]})
+        console.log("get event data from axios...")
+        console.log(data.data)
+        this.setState({events: data.data})
+        console.log("inside componentdidmount App, events is")
         console.log(this.state.events)
     })
   }
+
   render() {
     return (
       <div>
@@ -32,6 +35,7 @@ class App extends Component {
                 render={(props) => {
                   return (
                     <Events events={this.state.events}/>
+                    // <Events />
                   )
                 }}
               />
