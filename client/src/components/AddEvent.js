@@ -1,10 +1,16 @@
 import React, { Component } from "react";
-
 class AddEvent extends Component {
   constructor() {
     super();
-
-    this.state = {};
+    this.state = {
+      name: "",
+      img: "",
+      description: "",
+      food: "",
+      date: "",
+      cost: "",
+      venue: ""
+    };
   }
 
   render() {
