@@ -8,7 +8,7 @@ class Event extends Component {
         let data = JSON.stringify({
           _id: this.props.match.params.id
         });
-        axios.delete("http://localhost:3001/events/delete/:id", data, {
+        axios.delete(`http://localhost:3001/events/delete/${this.props.match.params.id}`, data, {
           headers: {
             "Content-Type": "application/json"
           }
