@@ -16,7 +16,6 @@ class NavBar extends Component {
             <li>
               <Link to="/venue/new">+Venue</Link>
             </li>
-            <li>JavaScript</li>
           </ul>
         </div>
       </nav>
