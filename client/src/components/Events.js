@@ -12,8 +12,6 @@ class Events extends Component {
 
   render() {
     let passed = this.props.events
-        console.log("passed is")
-        console.log(passed)
 
         let test = this.props.events.map((event, i) => {
             let pathname = `/events/${event._id}`

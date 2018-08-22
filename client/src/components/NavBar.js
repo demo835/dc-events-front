@@ -5,7 +5,7 @@ class NavBar extends Component {
   render() {
     return (
       <nav>
-        <div className="nav-wrapper">
+        <div className="nav-wrapper #42a5f5 blue lighten-1">
           <a href="#" className="brand-logo">
             <Link to="/">DC Events</Link>
           </a>
@@ -16,7 +16,6 @@ class NavBar extends Component {
             <li>
               <Link to="/venue/new">+Venue</Link>
             </li>
-            <li>JavaScript</li>
           </ul>
         </div>
       </nav>
