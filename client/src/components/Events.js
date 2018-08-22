@@ -8,10 +8,17 @@ class Events extends Component {
       events: []
     };
   }
+  // componentDidMount() {
+  //   axios.get("localhost:3001/events").then(res => {
+  //     this.setState({ events: res.data });
+  //     console.log(this.state.events);
+  //   });
+  // }
   render() {
+    let passed = this.props.events
     return (
       <div>
-        <Event />
+        <Event event={passed}/>
       </div>
     );
   }
