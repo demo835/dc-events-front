@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import axios from 'axios'
 import Events from "./Events";
+import NavBar from "./NavBar";
 
 class App extends Component {
   constructor() {
@@ -26,9 +27,10 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>DC Events Front End</h1>
+        {/* <h1>DC Events Front End</h1>
         <p>+Events</p>
-        <p>+Venues</p>
+        <p>+Venues</p> */}
+        <NavBar />
         <div className='body'>
             <Switch>
               <Route path='/'
