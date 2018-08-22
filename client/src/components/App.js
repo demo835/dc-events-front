@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import axios from "axios";
 import Events from "./Events";
+import Event from "./Event"
 import NavBar from "./NavBar";
 import AddEvent from "./AddEvent";
 import AddVenue from "./AddVenue";
@@ -58,6 +59,11 @@ class App extends Component {
                 }}
                 /> */}
             <Route exact path="/venue/new" component={AddVenue} />
+            <Route exact path="/events/:id"
+                render={props => {
+                    return <Event {...props} events={this.state.events}/>
+                }}
+            />
           </Switch>
         </div>
       </div>
