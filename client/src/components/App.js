@@ -51,7 +51,7 @@ class App extends Component {
                   )
                 }}
               />
-              <Route path='/add-event' component={AddEvent}/>
+              <Route exact path='/add-event' component={AddEvent}/>
               {/* <Route exact path='/add-event'
                 render={() => {
                   return (
