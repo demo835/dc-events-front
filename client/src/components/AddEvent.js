@@ -32,7 +32,7 @@ class AddEvent extends Component {
       cost: this.state.cost,
       venue: this.state.venue
     });
-    axios.post("http://localhost:3001/events/new", data, {
+    axios.post("https://dc-events-back.herokuapp.com/events/new", data, {
       headers: {
         "Content-Type": "application/json"
       }

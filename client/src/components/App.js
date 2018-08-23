@@ -18,7 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get("http://localhost:3001/events").then(data => {
+    axios.get("https://dc-events-back.herokuapp.com/events").then(data => {
       console.log("get event data from axios...");
       console.log(data.data);
       this.setState({ events: data.data });

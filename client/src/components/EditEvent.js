@@ -34,7 +34,7 @@ class EditEvent extends Component {
       venue: this.state.venue
     });
     axios.put(
-      `http://localhost:3001/events/update/${this.props.match.params.id}`,
+      `https://dc-events-back.herokuapp.com/events/update/${this.props.match.params.id}`,
       data,
       {
         headers: {
