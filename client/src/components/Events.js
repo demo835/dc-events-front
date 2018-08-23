@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom'
 import Event from "./Event";
 import axios from 'axios'
+import "./Events.css"
 
 class Events extends Component {
   constructor(props) {
@@ -31,7 +32,7 @@ class Events extends Component {
                                 <p>Venue: {event.venue}</p>
                             </div>
                         <div className="card-action">
-                            <Link to={pathname}>View Event</Link>
+                        <a className="waves-effect waves-teal #d32f2f red darken-2 btn text-black" id="view"><Link to={pathname}>View Event</Link></a>
                         </div>
                     </div>
                     </div>
