@@ -11,7 +11,8 @@ class AddEvent extends Component {
       food: "",
       date: "",
       cost: "",
-      venue: ""
+      venue: "",
+      venues: []
     };
   }
 
@@ -39,8 +40,18 @@ class AddEvent extends Component {
     });
   };
 
+  componentDidMount() {
+    axios.get("http://localhost:3001/venues").then(data => {
+      this.setState({ venues: data.data });
+      console.log(this.state.venues);
+    });
+  }
+
   render() {
     const { name, img, description, food, date, cost, venue } = this.state;
+    let options = this.state.venues.map((event, i) => {
+      return <option>{event.name}</option>;
+    });
     return (
       <div>
         <h1>Add Event</h1>
@@ -105,16 +116,15 @@ class AddEvent extends Component {
               placeholder="Cost"
             />
           </div>
-          <div>
-            <label for="name">Venue</label>
-            <input
-              type="text"
-              name="venue"
-              value={venue}
-              onChange={this.onChange}
-              placeholder="Venue"
-            />
-          </div>
+          <label for="name">Choose a Venue</label>
+          <select
+            name="venue"
+            value={venue}
+            onChange={this.onChange}
+            className="browser-default"
+          >
+            {options}
+          </select>
           <button type="submit">Submit</button>
         </form>
       </div>
