@@ -69,7 +69,6 @@ class AddVenue extends Component {
           </div>
           <button type="submit">Submit</button>
         </form>{" "}
-        */}
       </div>
     );
   }
