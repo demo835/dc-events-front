@@ -1,5 +1,3 @@
-
-
 # DC-Events-Front
 
 ### Description
