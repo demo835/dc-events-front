@@ -24,7 +24,7 @@ class AddVenue extends Component {
       location: this.state.location,
       capacity: this.state.capacity
     });
-    axios.post("http://localhost:3001/venues/new", data, {
+    axios.post("https://dc-events-back.herokuapp.com/venues/new", data, {
       headers: {
         "Content-Type": "application/json"
       }

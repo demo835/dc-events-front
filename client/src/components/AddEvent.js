@@ -42,7 +42,7 @@ class AddEvent extends Component {
   };
 
   componentDidMount() {
-    axios.get("http://localhost:3001/venues").then(data => {
+    axios.get("https://dc-events-back.herokuapp.com/venues").then(data => {
       this.setState({ venues: data.data });
       console.log(this.state.venues);
     });
