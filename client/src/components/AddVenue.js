@@ -38,7 +38,7 @@ class AddVenue extends Component {
         <h1>Add Venue</h1>
         <form onSubmit={this.onSubmit}>
           <div>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
@@ -48,7 +48,7 @@ class AddVenue extends Component {
             />
           </div>
           <div>
-            <label for="location">Location</label>
+            <label htmlFor="location">Location</label>
             <input
               type="text"
               name="location"
@@ -58,7 +58,7 @@ class AddVenue extends Component {
             />
           </div>
           <div>
-            <label for="name">Capacity</label>
+            <label htmlFor="name">Capacity</label>
             <input
               type="text"
               name="capacity"

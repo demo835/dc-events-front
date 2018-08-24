@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
-import Event from "./Event";
-import axios from 'axios'
 import "./Events.css"
 
 class Events extends Component {
@@ -12,7 +10,6 @@ class Events extends Component {
   }
 
   render() {
-    let passed = this.props.events
 
         let test = this.props.events.map((event, i) => {
             let pathname = `/events/${event._id}`

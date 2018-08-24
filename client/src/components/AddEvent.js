@@ -58,7 +58,7 @@ class AddEvent extends Component {
         <h1>Add Event</h1>
         <form onSubmit={this.onSubmit}>
           <div>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
@@ -68,7 +68,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="img">Img Url</label>
+            <label htmlFor="img">Img Url</label>
             <input
               type="text"
               name="img"
@@ -78,7 +78,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Description</label>
+            <label htmlFor="name">Description</label>
             <input
               type="text"
               name="description"
@@ -88,7 +88,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Food</label>
+            <label htmlFor="name">Food</label>
             <input
               type="text"
               name="food"
@@ -98,7 +98,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Date</label>
+            <label htmlFor="name">Date</label>
             <input
               type="text"
               name="date"
@@ -108,7 +108,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Cost</label>
+            <label htmlFor="name">Cost</label>
             <input
               type="text"
               name="cost"
@@ -117,7 +117,7 @@ class AddEvent extends Component {
               placeholder="Cost"
             />
           </div>
-          <label for="name">Choose a Venue</label>
+          <label htmlFor="name">Choose a Venue</label>
           <select
             name="venue"
             value={venue}
