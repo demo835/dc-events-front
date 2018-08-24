@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./AddEvent.css"
 
 class AddEvent extends Component {
   constructor() {
@@ -42,7 +43,7 @@ class AddEvent extends Component {
   render() {
     const { name, img, description, food, date, cost, venue } = this.state;
     return (
-      <div>
+      <div className="form">
         <h1>Add Event</h1>
         <form onSubmit={this.onSubmit}>
           <div>

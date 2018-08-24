@@ -1,3 +1,7 @@
 #view{
     background-color: blue;
 }
+
+.card {
+    margin: 15px 30px 20px 75px;
+}
