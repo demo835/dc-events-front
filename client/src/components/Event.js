@@ -40,10 +40,8 @@ class Event extends Component {
                                 <p>Venue: {result[0].venue}</p>
                             </div>
                         <div className="card-action">
-                            {/* <Link to={pathname}>View Event</Link> */}
-                            {/* <Link to={`/event/delete/${result[0]._id}`}>Delete</Link> */}
-                            <button type="submit" onClick={this.onSubmit}>Delete</button>
-                            <Link to={pathname}>Update</Link>
+                            <a className="waves-effect waves-light btn-small"><button type="submit" onClick={this.onSubmit}>Delete</button></a>
+                            <a className="waves-effect waves-light btn-small"><Link to={pathname}>Update</Link></a>
                         </div>
                     </div>
                     </div>

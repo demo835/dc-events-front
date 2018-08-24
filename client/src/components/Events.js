@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom'
-import Event from "./Event";
-import axios from 'axios'
+import "./Events.css"
 
 class Events extends Component {
   constructor(props) {
@@ -11,7 +10,6 @@ class Events extends Component {
   }
 
   render() {
-    let passed = this.props.events
 
         let test = this.props.events.map((event, i) => {
             let pathname = `/events/${event._id}`
@@ -31,7 +29,7 @@ class Events extends Component {
                                 <p>Venue: {event.venue}</p>
                             </div>
                         <div className="card-action">
-                            <Link to={pathname}>View Event</Link>
+                          <Link to={pathname}>View Event</Link>
                         </div>
                     </div>
                     </div>

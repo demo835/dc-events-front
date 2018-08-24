@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./AddEvent.css"
 
 class AddEvent extends Component {
   constructor() {
@@ -53,11 +54,11 @@ class AddEvent extends Component {
       return <option>{event.name}</option>;
     });
     return (
-      <div>
+      <div className="form">
         <h1>Add Event</h1>
         <form onSubmit={this.onSubmit}>
           <div>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
@@ -67,7 +68,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="img">Img Url</label>
+            <label htmlFor="img">Img Url</label>
             <input
               type="text"
               name="img"
@@ -77,7 +78,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Description</label>
+            <label htmlFor="name">Description</label>
             <input
               type="text"
               name="description"
@@ -87,7 +88,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Food</label>
+            <label htmlFor="name">Food</label>
             <input
               type="text"
               name="food"
@@ -97,7 +98,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Date</label>
+            <label htmlFor="name">Date</label>
             <input
               type="text"
               name="date"
@@ -107,7 +108,7 @@ class AddEvent extends Component {
             />
           </div>
           <div>
-            <label for="name">Cost</label>
+            <label htmlFor="name">Cost</label>
             <input
               type="text"
               name="cost"
@@ -116,7 +117,7 @@ class AddEvent extends Component {
               placeholder="Cost"
             />
           </div>
-          <label for="name">Choose a Venue</label>
+          <label htmlFor="name">Choose a Venue</label>
           <select
             name="venue"
             value={venue}
@@ -125,7 +126,8 @@ class AddEvent extends Component {
           >
             {options}
           </select>
-          <button type="submit">Submit</button>
+          <br/>
+          <button className="waves-effect waves-light btn-large #d32f2f red darken-2" type="submit">Submit</button>
         </form>
       </div>
     );

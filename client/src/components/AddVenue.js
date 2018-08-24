@@ -34,11 +34,11 @@ class AddVenue extends Component {
   render() {
     const { name, location, capacity } = this.state;
     return (
-      <div>
+      <div className="form">
         <h1>Add Venue</h1>
         <form onSubmit={this.onSubmit}>
           <div>
-            <label for="name">Name</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
               name="name"
@@ -48,7 +48,7 @@ class AddVenue extends Component {
             />
           </div>
           <div>
-            <label for="location">Location</label>
+            <label htmlFor="location">Location</label>
             <input
               type="text"
               name="location"
@@ -58,7 +58,7 @@ class AddVenue extends Component {
             />
           </div>
           <div>
-            <label for="name">Capacity</label>
+            <label htmlFor="name">Capacity</label>
             <input
               type="text"
               name="capacity"
@@ -67,9 +67,8 @@ class AddVenue extends Component {
               placeholder="Capacity"
             />
           </div>
-          <button type="submit">Submit</button>
+          <button className="waves-effect waves-light btn-large #d32f2f red darken-2" type="submit">Submit</button>
         </form>{" "}
-        */}
       </div>
     );
   }
