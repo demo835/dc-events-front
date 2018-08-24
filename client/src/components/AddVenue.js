@@ -34,7 +34,7 @@ class AddVenue extends Component {
   render() {
     const { name, location, capacity } = this.state;
     return (
-      <div>
+      <div className="form">
         <h1>Add Venue</h1>
         <form onSubmit={this.onSubmit}>
           <div>
@@ -67,7 +67,7 @@ class AddVenue extends Component {
               placeholder="Capacity"
             />
           </div>
-          <button type="submit">Submit</button>
+          <button className="waves-effect waves-light btn-large #d32f2f red darken-2" type="submit">Submit</button>
         </form>{" "}
       </div>
     );

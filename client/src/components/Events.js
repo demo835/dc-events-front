@@ -32,7 +32,7 @@ class Events extends Component {
                                 <p>Venue: {event.venue}</p>
                             </div>
                         <div className="card-action">
-                        <a className="waves-effect waves-teal #d32f2f red darken-2 btn text-black" id="view"><Link to={pathname}>View Event</Link></a>
+                          <Link to={pathname}>View Event</Link>
                         </div>
                     </div>
                     </div>

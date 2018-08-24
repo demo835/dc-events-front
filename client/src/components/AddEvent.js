@@ -126,7 +126,8 @@ class AddEvent extends Component {
           >
             {options}
           </select>
-          <button type="submit">Submit</button>
+          <br/>
+          <button className="waves-effect waves-light btn-large #d32f2f red darken-2" type="submit">Submit</button>
         </form>
       </div>
     );
